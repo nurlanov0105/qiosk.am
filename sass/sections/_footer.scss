@@ -1,0 +1,36 @@
+.footer {
+   padding: 25px 0;
+   background-color: #000;
+}
+
+.footer__row {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   font-weight: 400;
+   font-size: 17px;
+   color: #fff;
+
+   a {
+      text-decoration-color: transparent;
+      transition: text-decoration-color 0.2s, color 0.2s linear;
+      &:hover,
+      :focus {
+         text-decoration: underline;
+      }
+      &:active {
+         text-decoration: underline;
+      }
+
+      &:active {
+         color: #ffffffdd;
+      }
+   }
+
+   /* Mobile*/
+   @media (max-width: 599px) {
+      flex-direction: column;
+      row-gap: 13px;
+   }
+}

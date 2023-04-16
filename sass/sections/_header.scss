@@ -1,0 +1,109 @@
+.header {
+   padding-top: 10px;
+   padding-bottom: 30px;
+}
+.container {
+}
+.header__info {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.header__logo {
+   margin-top: -10px;
+   max-width: 275px;
+}
+.header__links {
+   display: flex;
+   align-items: center;
+   column-gap: 55px;
+}
+.header__contacts {
+   display: flex;
+   flex-direction: column;
+
+   a {
+      text-decoration-color: transparent;
+      transition: text-decoration-color 0.3s, color 0.3s linear;
+      &:hover,
+      :focus {
+         text-decoration: underline;
+      }
+      &:active {
+         text-decoration: underline;
+      }
+
+      &:active {
+         color: #ffffffdd;
+      }
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      display: none;
+   }
+}
+
+// .header__contacts.show-element {
+
+//    .header__contacts-number {
+//       font-size: 22px;
+
+//       /* Mobile*/
+//       @media (max-width: 599px) {
+//          font-size: 17px;
+//       }
+//    }
+
+//    .header__contacts-email {
+//       font-weight: 300;
+//       font-size: 15px;
+
+//       /* Tablet Small*/
+//       @media (max-width: 899px) {
+//          font-size: 22px;
+//       }
+
+//       /* Mobile*/
+//       @media (max-width: 599px) {
+//          font-size: 17px;
+//       }
+//    }
+//    /* Mobile*/
+//    @media (max-width: 599px) {
+//       margin-top: 10px;
+//    }
+// }
+
+.header__contacts-number {
+   font-size: 22px;
+}
+.header__contacts-email {
+   font-weight: 300;
+   font-size: 15px;
+}
+
+.header__contacts.hide-element {
+   display: none;
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 15px;
+
+      .header__contacts-email {
+         font-size: 22px;
+      }
+   }
+
+   /* Mobile*/
+   @media (max-width: 599px) {
+      margin-top: 10px;
+      .header__contacts-email,
+      .header__contacts-number {
+         font-size: 17px;
+      }
+   }
+}
